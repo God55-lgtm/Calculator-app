@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(./assets/fonts/LeagueSpartan-VariableFont_wght.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'MyFont', sans-serif;
+
+}
+
+:root {
+    --primary-color: hsl(222, 26%, 31%);
+    --secondary-color: hsl(223, 31%, 20%);
+    --tertiary-color: hsl(224, 36%, 15%);
+    --text-color: hsl(0, 100%, 100%);
+    --key-background: hsl(0, 0%, 90%);
+    --key-color: hsl(224, 28%, 35%);
+    --key-blue-cyan: hsl(225, 34%, 61%);
+    --key-blue-shadow: hsl(185, 58%, 25%);
+    --key-shadows: hsl(28, 16%, 65%);
+    --key-shadow-delete: hsl(224, 28%, 35%);
+
+}
+
+body {
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.container-calc {
+    border-radius: 15px;
+    padding: 20px;
+    width: 320px;
+    gap: 2rem;
+}
+
+/* Seccion de cambiar el color de el tema y la palabra calc */
+.cambio-tema {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    box-shadow: none;
+
+}
+
+.tema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.tema h4 {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 30px;
+    letter-spacing: 2px;
+
+}
+
+
+
+.numeros-tema {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.numeros {
+    display: flex;
+    width: 50px;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: bold;
+    justify-content: space-between;
+    letter-spacing: 2px;
+
+}
+
+.numeros p {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15px;
+
+}
+
+
+/* Seccion de resultados */
+.result-div {
+    background-color: var(--tertiary-color);
+    height: 80px;
+    width: 100%;
+    border: solid var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    margin-top: 10px;
+    overflow-x: auto;
+
+}
+
+.result p {
+    margin-right: 20px;
+    color: var(--text-color);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    user-select: none;
+    white-space: nowrap;
+    font-family: 'MyFont', sans-serif;
+
+}
+
+/* Seccion de numeros y operadores  */
+
+.numeros-operadores{
+    display: grid;
+    grid-template-rows:repeat(5, 1fr);
+    gap: 15px;
+    background-color:var(--tertiary-color) ;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 250px;
+    font-size: 32px;
+}
+
+
+.fila {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+.boton,
+.button-igual,
+.button-reset,
+.button-mult,
+.button-resta,
+.button-suma,
+.button-divi {
+    border: solid var(--);
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: var(--key-background);
+    color: var(--key-color);
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1cap;
+    box-shadow: 0px 2px 0px 0px var(--key-shadows);
+    font-size: 32px;
+
+
+}
+
+.button-igual,
+.button-reset,
+.button-mult,
+.button-resta,
+.button-suma,
+.button-divi{
+    font-size: 12px;
+    font-weight: 700;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    cursor: pointer;
+
+}
+
+.boton span {
+    font-size: 14px;
+    font-weight: 700;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+
+}
+
+.button-delete {
+    font-size: 12px;
+    font-weight: 700;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: var(--key-blue-cyan);
+    border-bottom: 0cap;
+    box-shadow: 0px 2px 0px 0px var(--key-shadow-delete);
+
+}
+
+.button-delete:hover {
+    cursor: pointer;
+    background-color: var(--key-blue-shadow);
+    color: var(--text-color);
+}
+
+.button-reset,
+.button-igual {
+    width: 100px;
+    height: 25px;
+    border: solid var(--key-background);
+    border-radius: 5px;
+
+}
+
+/* Selector de tema  */
+.themeSelector {
+    -webkit-appearance: none;
+    width: 70px;
+    height: 25px;
+    background: var(--key-background);
+    border-radius: 15px;
+    position: relative;
+    outline: none;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

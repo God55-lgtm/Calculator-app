@@ -1,26 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
+  <div class="container-calc">
+    <div class="cambio-tema">
+      <h4>calc</h4>
+      <div class="tema">
+        <h4>THEME</h4>
+        <div class="numeros-tema">
+          <div class="numeros">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <input type="range" min="1" max="3" value="1" class="themeSelector" id="themeSlider">
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultados -->
+    <div class="result-div">
+      <div class="result">
+        <p>0</p>
+      </div>
+    </div>
+
+    <!-- Numeros -->
+    <div class="numeros-operadores">
+      <div class="fila">
+        <div class="boton"><span>7</span></div>
+        <div class="boton"><span>8</span></div>
+        <div class="boton"><span>9</span></div>
+        <div class="button-delete"><span>DEL</span></div>
+      </div>
+      <div class="fila">
+        <div class="boton"><span>4</span></div>
+        <div class="boton"><span>5</span></div>
+        <div class="boton"><span>6</span></div>
+        <div class="button-suma"><span>+</span></div>
+      </div>
+      <div class="fila">
+        <div class="boton"><span>1</span></div>
+        <div class="boton"><span>2</span></div>
+        <div class="boton"><span>3</span></div>
+        <div class="button-resta"><span>-</span></div>
+      </div>
+      <div class="fila">
+        <div class="boton"><span>.</span></div>
+        <div class="boton"><span>0</span></div>
+        <div class="button-divi"><span>/</span></div>
+        <div class="button-mult"><span>x</span></div>
+      </div>
+      <div class="fila">
+        <button class="button-reset">RESET</button>
+        <button class="button-igual">=</button>
+      </div>
+    </div>
 
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
