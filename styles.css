@@ -187,7 +187,8 @@ body {
 .button-mult,
 .button-resta,
 .button-suma,
-.button-divi{
+.button-divi,
+.button-delete{
     font-size: 12px;
     font-weight: 700;
     user-select: none;
@@ -211,7 +212,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 6px;
+    margin-top: 10px;
 
 }
 
@@ -222,8 +223,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 25px;
+    width: 50px;
+    height: 32px;
     border-radius: 5px;
     background-color: var(--key-blue-cyan);
     border-bottom: 0cap;
@@ -238,8 +239,14 @@ body {
 }
 
 .button-reset,
+.button-igual,
+.button-suma,
+.button-resta,
+.button-mult,
+.button-divi,
+.button-reset,
 .button-igual {
-    width: 100px;
+    width: 45px;
     height: 25px;
     border: solid var(--key-background);
     border-radius: 5px;
