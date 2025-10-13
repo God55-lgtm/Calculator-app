@@ -37,10 +37,10 @@ body {
 }
 
 .container-calc {
-    border-radius: 15px;
-    padding: 15px;
-    width: 320px;
-    gap: 1rem;
+    border-radius: 25px;
+    padding: 30px;
+    width: 600px; /* Aumentado de 320px */
+    gap: 2rem;
 }
 
 /* --------------------Header y tema-------------------- */
@@ -52,6 +52,7 @@ body {
     color: var(--text-color);
     background-color: var(--primary-color);
     box-shadow: none;
+    margin-bottom: 20px;
 }
 
 .tema {
@@ -59,13 +60,13 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 1px;
+    gap: 10px;
 }
 
 .tema h4 {
-    font-size: 12px;
+    font-size: 24px; /* Aumentado de 12px */
     font-weight: bold;
-    margin-right: 30px;
+    margin-right: 40px;
     letter-spacing: 2px;
 }
 
@@ -75,21 +76,21 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--text-color);
-    font-size: 14px;
+    font-size: 20px; /* Aumentado de 14px */
     font-weight: bold;
     letter-spacing: 2px;
 }
 
 .numeros-tema {
     flex-direction: column;
-    height: 40px;
-    margin-right: 10px;
-    margin-bottom: 25px;
+    height: 60px; /* Aumentado de 40px */
+    margin-right: 15px;
+    margin-bottom: 30px;
 }
 
 .numeros {
-    width: 50px;
-    gap: 15px;
+    width: 80px; /* Aumentado de 50px */
+    gap: 20px; /* Aumentado de 15px */
     justify-content: space-between;
 }
 
@@ -98,29 +99,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 15px;
+    width: 20px; /* Aumentado de 15px */
 }
 
 /* --------------------Resultados-------------------- */
 .result-div {
     width: 100%;
     background-color: var(--tertiary-color);
-    height: 80px;
+    height: 140px; /* Aumentado de 80px */
     border: solid var(--primary-color);
-    border-radius: 10px;
+    border-radius: 15px; /* Aumentado de 10px */
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10px;
+    padding: 20px; /* Aumentado de 10px */
     box-sizing: border-box;
-    margin-top: 10px;
+    margin-top: 20px;
     overflow-x: auto;
 }
 
 .result p {
-    margin-right: 20px;
+    margin-right: 30px; /* Aumentado de 20px */
     color: var(--text-color);
-    font-size: 32px;
+    font-size: 56px; /* Aumentado de 32px */
     font-weight: 700;
     letter-spacing: 2px;
     user-select: none;
@@ -130,22 +131,22 @@ body {
 /*------------ Teclado-------------------- */
 .numeros-operadores {
     justify-content: center;
-    width: 88%;
+    width: 92%; /* Aumentado de 88% */
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    gap: 5px;
+    gap: 10px; /* Aumentado de 5px */
     background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-    height: 250px;
-    font-size: 32px;
+    padding: 30px; /* Aumentado de 20px */
+    border-radius: 15px; /* Aumentado de 10px */
+    margin-top: 30px; /* Aumentado de 20px */
+    height: 450px; /* Aumentado de 250px */
+    font-size: 40px; /* Aumentado de 32px */
 }
 
 .fila {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 25px; /* Aumentado de 15px */
 }
 
 .fila-resert-igual {
@@ -163,26 +164,27 @@ body {
 .button-suma,
 .button-divi,
 .boton-punto {
-    width: 50px;
-    height: 30px;
-    border-radius: 5px;
+    width: 90px; /* Aumentado de 50px */
+    height: 60px; /* Aumentado de 30px */
+    border-radius: 10px; /* Aumentado de 5px */
     background-color: var(--key-background);
     color: var(--key-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 2px 0px 0px var(--key-shadows);
+    box-shadow: 0px 4px 0px 0px var(--key-shadows); /* Aumentado de 2px */
     font-weight: 700;
+    transition: all 0.1s ease;
 }
 
 .boton {
-    width: 58px;
-    height: 35px;
+    width: 110px; /* Aumentado de 58px */
+    height: 70px; /* Aumentado de 35px */
 }
 
 .boton span,
 .boton-punto span {
-    font-size: 25px;
+    font-size: 36px; /* Aumentado de 25px */
     font-weight: 700;
     user-select: none;
     display: flex;
@@ -201,36 +203,35 @@ body {
 .boton-punto:hover,
 .button-delete:hover {
     cursor: pointer;
+    transform: translateY(-2px);
 }
 
 /* --------------------Botones especiales-------------------- */
 .button-delete,
 .button-reset {
-    width: 58px;
-    height: 35px;
-    font-size: 20px;
-
+    width: 110px; /* Aumentado de 58px */
+    height: 70px; /* Aumentado de 35px */
+    font-size: 28px; /* Aumentado de 20px */
     color: var(--delete-and-reset-theme2);
     background-color: var(--key-blue-cyan);
-    box-shadow: 0px 2px 0px 0px var(--key-shadow-delete);
+    box-shadow: 0px 4px 0px 0px var(--key-shadow-delete); /* Aumentado de 2px */
 }
 
 .button-delete span{
-    font-size: 16px;
+    font-size: 24px; /* Aumentado de 16px */
     justify-content: center;
     align-items: center;    
-
 }
 
 .button-reset,
 .button-igual {
-    width: 130px;
-    height: 40px;
+    width: 240px; /* Aumentado de 130px */
+    height: 70px; /* Aumentado de 40px */
 }
 
 .button-igual {
     background-color: var(--naranja);
-    box-shadow: 0px 2px 0px 0px var(--naranja-shadow);
+    box-shadow: 0px 4px 0px 0px var(--naranja-shadow); /* Aumentado de 2px */
 }
 
 .button-igual span {
@@ -244,7 +245,7 @@ body {
 .button-mult span,
 .button-divi span,
 .button-delete span {
-    font-size: 16px;
+    font-size: 24px; /* Aumentado de 16px */
     justify-content: center;
     align-items: center;
 }
@@ -263,15 +264,16 @@ body {
 }
 
 .button-delete {
-  border-radius: 5px;
+  border-radius: 10px; /* Aumentado de 5px */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
 .button-delete span {
   font-family: 'MyFont', sans-serif;
-  font-size: 20px;
+  font-size: 28px; /* Aumentado de 20px */
   font-weight: 700;
   color: var(--delete-and-reset-theme2);
   display: flex;
@@ -286,15 +288,15 @@ body {
 .button-mult,
 .button-divi,
 .boton-punto {
-  width: 58px;
-  height: 35px;
-  border-radius: 5px;
+  width: 110px; /* Aumentado de 58px */
+  height: 70px; /* Aumentado de 35px */
+  border-radius: 10px; /* Aumentado de 5px */
   background-color: var(--key-background);
   color: var(--key-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 0px 0px var(--key-shadows);
+  box-shadow: 0px 4px 0px 0px var(--key-shadows); /* Aumentado de 2px */
   font-weight: 700;
   cursor: pointer;
 }
@@ -304,7 +306,7 @@ body {
 .button-mult span,
 .button-divi span,
 .boton-punto span {
-  font-size: 25px;
+  font-size: 36px; /* Aumentado de 25px */
   font-weight: 700;
   user-select: none;
   display: flex;
@@ -313,30 +315,29 @@ body {
   margin-top: 2px;
 }
 
-
 /* --------------------Selector de tema-------------------- */
 .themeSelector {
     -webkit-appearance: none;
-    width: 70px;
-    height: 22px;
+    width: 120px; /* Aumentado de 70px */
+    height: 32px; /* Aumentado de 22px */
     background: var(--key-background);
-    border-radius: 15px;
+    border-radius: 20px; /* Aumentado de 15px */
     position: relative;
     outline: none;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2); /* Aumentado de 2px */
     cursor: pointer;
 }
 
 /* Todo para cambiar una bolita */
 .themeSelector {
   -webkit-appearance: none;
-  width: 70px;
-  height: 22px;
+  width: 120px; /* Aumentado de 70px */
+  height: 32px; /* Aumentado de 22px */
   background: var(--key-background);
-  border-radius: 15px;
+  border-radius: 20px; /* Aumentado de 15px */
   position: relative;
   outline: none;
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2); /* Aumentado de 2px */
   cursor: pointer;
 }
 
@@ -344,37 +345,37 @@ body {
 .themeSelector::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 18px;
-  height: 18px;
+  width: 26px; /* Aumentado de 18px */
+  height: 26px; /* Aumentado de 18px */
   border-radius: 50%;
   border: none;
   background-color: hsl(6, 92%, 64%); /* color inicial para tema 1 */
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 3px; /* Aumentado de 2px */
   transition: background-color 0.3s ease;
 }
 
-
 /* Firefox */
 .themeSelector::-moz-range-thumb {
-  width: 18px;
-  height: 18px;
+  width: 26px; /* Aumentado de 18px */
+  height: 26px; /* Aumentado de 18px */
   border-radius: 50%;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .body.theme-1 .themeSelector::-webkit-slider-thumb {
   background-color: hsl(17, 74%, 58%);
 }
+
 .body.theme-2 .themeSelector::-webkit-slider-thumb {
   background-color: hsl(9, 92%, 38%);
 }
+
 .body.theme-3 .themeSelector::-webkit-slider-thumb {
   background-color: hsl(176, 100%, 44%);
 }
-
-
 
 /* Temas */
 .body.theme-2 {
@@ -406,6 +407,7 @@ body {
     --naranja: hsl(268, 100%, 50%);;
     --naranja-shadow: hsl(285, 91%, 52%);
 }
+
 .body.theme-3 .button-delete:hover,
 .body.theme-3 .button-reset:hover,
 .body.theme-3 .button-igual:hover {
@@ -419,4 +421,29 @@ body {
   color: hsl(0, 0%, 100%) !important;
 }
 
-
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .container-calc {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .numeros-operadores {
+        height: 400px;
+    }
+    
+    .boton, .button-suma, .button-resta, .button-mult, .button-divi, .boton-punto {
+        width: 70px;
+        height: 50px;
+    }
+    
+    .boton {
+        width: 80px;
+        height: 55px;
+    }
+    
+    .button-reset, .button-igual {
+        width: 180px;
+        height: 55px;
+    }
+}
