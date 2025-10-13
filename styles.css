@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     font-family: 'MyFont', sans-serif;
-
 }
 
 :root {
@@ -21,9 +20,13 @@
     --key-blue-shadow: hsl(185, 58%, 25%);
     --key-shadows: hsl(28, 16%, 65%);
     --key-shadow-delete: hsl(224, 28%, 35%);
-
+    --naranja: hsl(6, 92%, 64%);
+    --naranja-shadow: hsl(6, 70%, 34%);
+    --delete-and-reset-theme2: hsl(0, 100%, 100%);
+    --background-hover-key: hsl(0, 0%, 100%);
 }
 
+/* --------------------Layout General-------------------- */
 body {
     background-color: var(--primary-color);
     overflow-x: hidden;
@@ -31,17 +34,16 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
 }
 
 .container-calc {
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
     width: 320px;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-/* Seccion de cambiar el color de el tema y la palabra calc */
+/* --------------------Header y tema-------------------- */
 .cambio-tema {
     display: flex;
     justify-content: space-between;
@@ -50,7 +52,6 @@ body {
     color: var(--text-color);
     background-color: var(--primary-color);
     box-shadow: none;
-
 }
 
 .tema {
@@ -58,8 +59,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 10px;
-
+    gap: 1px;
 }
 
 .tema h4 {
@@ -67,35 +67,30 @@ body {
     font-weight: bold;
     margin-right: 30px;
     letter-spacing: 2px;
-
 }
 
-
-
-.numeros-tema {
+.numeros-tema,
+.numeros {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    height: 40px;
     color: var(--text-color);
     font-size: 14px;
     font-weight: bold;
-    margin-right: 10px;
     letter-spacing: 2px;
+}
+
+.numeros-tema {
+    flex-direction: column;
+    height: 40px;
+    margin-right: 10px;
     margin-bottom: 25px;
 }
 
 .numeros {
-    display: flex;
     width: 50px;
-    align-items: center;
-    color: var(--text-color);
-    font-size: 14px;
-    font-weight: bold;
+    gap: 15px;
     justify-content: space-between;
-    letter-spacing: 2px;
-
 }
 
 .numeros p {
@@ -104,15 +99,13 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 15px;
-
 }
 
-
-/* Seccion de resultados */
+/* --------------------Resultados-------------------- */
 .result-div {
+    width: 100%;
     background-color: var(--tertiary-color);
     height: 80px;
-    width: 100%;
     border: solid var(--primary-color);
     border-radius: 10px;
     display: flex;
@@ -120,10 +113,8 @@ body {
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-    /* box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25); */
     margin-top: 10px;
     overflow-x: auto;
-
 }
 
 .result p {
@@ -134,17 +125,16 @@ body {
     letter-spacing: 2px;
     user-select: none;
     white-space: nowrap;
-    font-family: 'MyFont', sans-serif;
-
 }
 
-/* Seccion de numeros y operadores  */
-
-.numeros-operadores{
+/*------------ Teclado-------------------- */
+.numeros-operadores {
+    justify-content: center;
+    width: 88%;
     display: grid;
-    grid-template-rows:repeat(5, 1fr);
-    gap: 15px;
-    background-color:var(--tertiary-color) ;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 5px;
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -152,116 +142,279 @@ body {
     font-size: 32px;
 }
 
-
 .fila {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
+.fila-resert-igual {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+/* --------------------Botones generales-------------------- */
 .boton,
 .button-igual,
 .button-reset,
 .button-mult,
 .button-resta,
 .button-suma,
-.button-divi {
-    border: solid var(--);
+.button-divi,
+.boton-punto {
     width: 50px;
     height: 30px;
     border-radius: 5px;
     background-color: var(--key-background);
     color: var(--key-color);
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1cap;
     box-shadow: 0px 2px 0px 0px var(--key-shadows);
-    font-size: 32px;
-
-
+    font-weight: 700;
 }
 
-.button-igual,
-.button-reset,
-.button-mult,
-.button-resta,
-.button-suma,
-.button-divi,
-.button-delete{
-    font-size: 12px;
+.boton {
+    width: 58px;
+    height: 35px;
+}
+
+.boton span,
+.boton-punto span {
+    font-size: 25px;
     font-weight: 700;
     user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 25px;
-    border-radius: 5px;
+    margin-top: 2px;
 }
 
-.boton:hover {
+.boton:hover,
+.button-igual:hover,
+.button-reset:hover,
+.button-mult:hover,
+.button-resta:hover,
+.button-divi:hover,
+.button-suma:hover,
+.boton-punto:hover,
+.button-delete:hover {
     cursor: pointer;
-
 }
 
-.boton span {
-    font-size: 14px;
-    font-weight: 700;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+/* --------------------Botones especiales-------------------- */
+.button-delete,
+.button-reset {
+    width: 58px;
+    height: 35px;
+    font-size: 20px;
 
-}
-
-.button-delete {
-    font-size: 12px;
-    font-weight: 700;
-    user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 32px;
-    border-radius: 5px;
+    color: var(--delete-and-reset-theme2);
     background-color: var(--key-blue-cyan);
-    border-bottom: 0cap;
     box-shadow: 0px 2px 0px 0px var(--key-shadow-delete);
+}
 
+.button-delete span{
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;    
+
+}
+
+.button-reset,
+.button-igual {
+    width: 130px;
+    height: 40px;
+}
+
+.button-igual {
+    background-color: var(--naranja);
+    box-shadow: 0px 2px 0px 0px var(--naranja-shadow);
+}
+
+.button-igual span {
+    color: var(--delete-and-reset-theme2);
+}
+
+.button-reset span,
+.button-igual span,
+.button-suma span,
+.button-resta span,
+.button-mult span,
+.button-divi span,
+.button-delete span {
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-delete:hover {
-    cursor: pointer;
-    background-color: var(--key-blue-shadow);
+    background-color: hsl(225, 73%, 79%);
     color: var(--text-color);
 }
 
-.button-reset,
-.button-igual,
+.button-reset:hover {
+    background-color: hsl(225, 73%, 79%);
+}
+
+.button-igual:hover {
+    background-color: hsl(6, 82%, 73%);
+}
+
+.button-delete {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.button-delete span {
+  font-family: 'MyFont', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--delete-and-reset-theme2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
 .button-suma,
 .button-resta,
 .button-mult,
 .button-divi,
-.button-reset,
-.button-igual {
-    width: 45px;
-    height: 25px;
-    border: solid var(--key-background);
-    border-radius: 5px;
-
+.boton-punto {
+  width: 58px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: var(--key-background);
+  color: var(--key-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 0px 0px var(--key-shadows);
+  font-weight: 700;
+  cursor: pointer;
 }
 
-/* Selector de tema  */
+.button-suma span,
+.button-resta span,
+.button-mult span,
+.button-divi span,
+.boton-punto span {
+  font-size: 25px;
+  font-weight: 700;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+
+/* --------------------Selector de tema-------------------- */
 .themeSelector {
     -webkit-appearance: none;
     width: 70px;
-    height: 25px;
+    height: 22px;
     background: var(--key-background);
     border-radius: 15px;
     position: relative;
     outline: none;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+}
+
+/* Todo para cambiar una bolita */
+.themeSelector {
+  -webkit-appearance: none;
+  width: 70px;
+  height: 22px;
+  background: var(--key-background);
+  border-radius: 15px;
+  position: relative;
+  outline: none;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Estilo base del thumb (bolita) */
+.themeSelector::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(6, 92%, 64%); /* color inicial para tema 1 */
+  cursor: pointer;
+  margin-top: 2px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Firefox */
+.themeSelector::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.body.theme-1 .themeSelector::-webkit-slider-thumb {
+  background-color: hsl(17, 74%, 58%);
+}
+.body.theme-2 .themeSelector::-webkit-slider-thumb {
+  background-color: hsl(9, 92%, 38%);
+}
+.body.theme-3 .themeSelector::-webkit-slider-thumb {
+  background-color: hsl(176, 100%, 44%);
+}
+
+
+
+/* Temas */
+.body.theme-2 {
+    --primary-color: hsl(0, 0%, 90%);
+    --secondary-color: hsl(60, 7%, 74%);
+    --tertiary-color: hsl(0, 0%, 93%);
+    --text-color: hsl(60, 10%, 19%);
+    --key-background: hsl(0, 0%, 90%);
+    --key-color: hsl(60, 10%, 19%);
+    --key-blue-cyan: hsl(185, 42%, 37%);
+    --key-blue-shadow: hsl(185, 58%, 25%);
+    --key-shadows: hsl(28, 16%, 65%);
+    --key-shadow-delete: hsl(224, 28%, 35%);
+    --naranja: hsl(25, 98%, 40%);
+    --naranja-shadow: hsl(6, 70%, 34%);
+}
+
+.body.theme-3 {
+    --primary-color: hsl(268, 75%, 9%);
+    --secondary-color: hsl(268, 71%, 12%);
+    --tertiary-color: hsl(268, 71%, 12%);
+    --text-color: hsl(52, 100%, 62%);
+    --key-background: hsl(268, 47%, 21%);
+    --key-color: hsl(52, 100%, 62%);
+    --key-blue-cyan: hsl(281, 89%, 36%);
+    --key-blue-shadow: hsl(177, 92%, 70%);
+    --key-shadows: hsl(290, 70%, 36%);
+    --key-shadow-delete: hsl(285, 91%, 52%);
+    --naranja: hsl(268, 100%, 50%);;
+    --naranja-shadow: hsl(285, 91%, 52%);
+}
+.body.theme-3 .button-delete:hover,
+.body.theme-3 .button-reset:hover,
+.body.theme-3 .button-igual:hover {
+  background-color:  hsl(290, 72%, 80%) !important;
+  color: var(--key-color) !important;
+}
+
+.body.theme-3 .button-delete:hover span,
+.body.theme-3 .button-reset:hover span,
+.body.theme-3 .button-igual:hover span {
+  color: hsl(0, 0%, 100%) !important;
 }
