@@ -426,30 +426,225 @@ h4 {
 .body.theme-3 .button-igual:hover span {
   color: hsl(0, 0%, 100%) !important;
 }
-
-/* Media queries para responsividad */
-@media (max-width: 768px) {
+/* Media query para móvil 375px - Diseño exacto como la imagen */
+@media (max-width: 375px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        min-height: 100vh;
+        height: 100%;
+    }
+    
     .container-calc {
-        width: 90%;
-        padding: 20px;
+        padding: 25px 20px;
+        width: 100%;
+        max-width: 375px;
+        gap: 1.2rem;
+        margin: 0 auto;
     }
     
+    /* Header */
+    .cambio-tema {
+        margin-bottom: 20px;
+    }
+    
+    .tema h4 {
+        font-size: 10px;
+        margin-right: 20px;
+        letter-spacing: 1.5px;
+        margin-top: 5px;
+    }
+    
+    h4 {
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-weight: 800;
+    }
+    
+    .numeros-tema {
+        height: 30px;
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+    
+    .numeros {
+        width: 45px;
+        gap: 12px;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .numeros p {
+        width: 10px;
+    }
+    
+    /* Display de resultados */
+    .result-div {
+        height: 85px;
+        width: 85%;
+        border-radius: 8px;
+        padding: 20px 15px;
+        margin-top: 0;
+    }
+    
+    .result p {
+        margin-right: 15px;
+        font-size: 36px;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+    
+    /* Teclado */
     .numeros-operadores {
-        height: 400px;
+        gap: 12px;
+        padding: 25px;
+        border-radius: 8px;
+        margin-top: 20px;
+        height: 380px;
+        font-size: 28px;
+        width: 66%;
     }
     
-    .boton, .button-suma, .button-resta, .button-mult, .button-divi, .boton-punto {
-        width: 70px;
-        height: 50px;
+    .fila {
+        gap: 11px;
+        height: 60px;
     }
     
-    .boton {
-        width: 80px;
-        height: 55px;
+    .fila-resert-igual {
+        gap: 12px;
+        height: 60px;
     }
     
-    .button-reset, .button-igual {
-        width: 180px;
-        height: 55px;
+    /* Botones normales */
+    .boton,
+    .button-mult,
+    .button-resta,
+    .button-suma,
+    .button-divi,
+    .boton-punto {
+        min-height: 60px;
+        border-radius: 6px;
+        box-shadow: 0px 3px 0px 0px var(--key-shadows);
+        font-size: 28px;
+    }
+    
+    .boton span,
+    .boton-punto span,
+    .button-suma span,
+    .button-resta span,
+    .button-mult span,
+    .button-divi span {
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 0;
+    }
+    
+    /* Botones especiales */
+    .button-delete,
+    .button-reset {
+        min-height: 60px;
+        border-radius: 6px;
+        box-shadow: 0px 3px 0px 0px var(--key-shadow-delete);
+        font-size: 16px;
+    }
+    
+    .button-delete span {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .button-reset,
+    .button-igual {
+        min-height: 60px;
+        border-radius: 6px;
+    }
+    
+    .button-reset span,
+    .button-igual span {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    
+    .button-igual {
+        box-shadow: 0px 3px 0px 0px var(--naranja-shadow);
+    }
+    
+    /* Selector de tema más pequeño */
+    .themeSelector {
+        width: 60px;
+        height: 20px;
+        border-radius: 12px;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .themeSelector::-webkit-slider-thumb {
+        width: 14px;
+        height: 14px;
+        margin-top: 3px;
+    }
+    
+    .themeSelector::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+    }
+    
+    /* Ajustes específicos para distribución de botones */
+    .fila:first-child .boton,
+    .fila:nth-child(2) .boton,
+    .fila:nth-child(3) .boton {
+        width: 38px;
+        height: 15px;
+    }
+    
+    .button-delete {
+        width: 38px;
+        height: 15px;
+    }
+
+    .button-delete span{
+        font-size: 16px;
+        justify-content: center;
+    }
+    
+    .button-reset,
+    .button-igual {
+        width: 48%;
+    }
+    
+    /* Asegurar que los operadores tengan el mismo tamaño */
+    .button-suma,
+    .button-resta,
+    .button-mult,
+    .button-divi {
+        width:38px;
+        height: 15px;
+    }
+    
+    /* Punto decimal y cero */
+    .boton-punto {
+        width: 38px;
+        height: 15px;
+    }
+    
+    /* Ajuste específico para el cero */
+    .fila:nth-child(4) .boton:nth-child(2) {
+        width: 38px;
+        height: 15px;
+    }
+
+    .button-reset,
+    .button-igual{
+        font-size: 16px;
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+        width: 100px;
+        height: 1px;
+    }
+
+    .tema{
+        margin-right: 50px;
     }
 }
