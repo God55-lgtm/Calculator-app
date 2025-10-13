@@ -15,6 +15,7 @@
     --tertiary-color: hsl(224, 36%, 15%);
     --text-color: hsl(0, 100%, 100%);
     --key-background: hsl(0, 0%, 90%);
+    --toggle-background: hsl(223, 31%, 20%);
     --key-color: hsl(224, 28%, 35%);
     --key-blue-cyan: hsl(225, 34%, 61%);
     --key-blue-shadow: hsl(185, 58%, 25%);
@@ -339,7 +340,7 @@ h4 {
   -webkit-appearance: none;
   width: 120px; /* Aumentado de 70px */
   height: 32px; /* Aumentado de 22px */
-  background: var(--key-background);
+  background: var(--toggle-background);
   border-radius: 20px; /* Aumentado de 15px */
   position: relative;
   outline: none;
@@ -397,6 +398,7 @@ h4 {
     --key-shadow-delete: hsl(224, 28%, 35%);
     --naranja: hsl(25, 98%, 40%);
     --naranja-shadow: hsl(6, 70%, 34%);
+    --toggle-background: hsl(0, 5%, 81%);
 }
 
 .body.theme-3 {
@@ -412,6 +414,7 @@ h4 {
     --key-shadow-delete: hsl(285, 91%, 52%);
     --naranja: hsl(268, 100%, 50%);;
     --naranja-shadow: hsl(285, 91%, 52%);
+    --toggle-background: hsl(268, 47%, 21%);
 }
 
 .body.theme-3 .button-delete:hover,
