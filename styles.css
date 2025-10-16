@@ -446,9 +446,11 @@ h4 {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.15);
     }
+
     100% {
         transform: scale(1);
     }
@@ -462,9 +464,11 @@ h4 {
     0% {
         box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.2);
     }
+
     50% {
         box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.3);
     }
+
     100% {
         box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.2);
     }
@@ -517,7 +521,7 @@ h4 {
     color: hsl(0, 0%, 100%) !important;
 }
 
-/* Media query para móviles pequeños - MEJORADO */
+/* Media query para móviles pequeños */
 @media (max-width: 480px) {
     .themeSelector {
         width: 70px;
@@ -525,22 +529,22 @@ h4 {
         border-radius: 14px;
         padding: 0 6px;
     }
-    
+
     .themeSelector::-webkit-slider-thumb {
         width: 18px;
         height: 18px;
     }
-    
+
     .themeSelector::-webkit-slider-track {
         height: 24px;
         border-radius: 14px;
     }
-    
+
     .themeSelector::-moz-range-thumb {
         width: 18px;
         height: 18px;
     }
-    
+
     .themeSelector::-moz-range-track {
         height: 24px;
         border-radius: 14px;
@@ -548,33 +552,112 @@ h4 {
 }
 
 @media (max-width: 320px) {
+    .container-calc {
+        padding: 8px;
+        gap: 0.8rem;
+    }
+
+    .cambio-tema {
+        margin-bottom: 12px;
+    }
+
+    .tema h4 {
+        font-size: 11px;
+        margin-right: 4px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .numeros-tema {
+        height: 22px;
+    }
+
+    .numeros {
+        width: 35px;
+        gap: 5px;
+        font-size: 9px;
+    }
+
+    .operation-display {
+        font-size: 11px;
+        padding: 0 6px;
+    }
+
+    .result-div {
+        height: 70px;
+        padding: 10px;
+    }
+
+    .result p {
+        font-size: 22px;
+        margin-right: 6px;
+    }
+
+    .numeros-operadores {
+        padding: 10px;
+        height: 320px;
+        gap: 6px;
+        /* Reducido de 8px */
+    }
+
+    .fila {
+        gap: 6px;
+        /* Reducido de 8px */
+        height: 45px;
+    }
+
+    .fila-resert-igual {
+        gap: 6px;
+        /* Reducido de 8px */
+        height: 45px;
+    }
+
+    .boton,
+    .button-mult,
+    .button-resta,
+    .button-suma,
+    .button-divi,
+    .boton-punto,
+    .button-delete,
+    .button-reset,
+    .button-igual {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .boton span,
+    .boton-punto span,
+    .button-suma span,
+    .button-resta span,
+    .button-mult span,
+    .button-divi span {
+        font-size: 16px;
+    }
+
+    .button-delete span {
+        font-size: 12px;
+    }
+
+    .button-reset span,
+    .button-igual span {
+        font-size: 12px;
+    }
+
     .themeSelector {
-        width: 60px;
-        height: 20px;
-        border-radius: 12px;
-        padding: 0 5px;
+        width: 45px;
+        height: 16px;
     }
-    
+
     .themeSelector::-webkit-slider-thumb {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .themeSelector::-webkit-slider-track {
-        height: 20px;
-        border-radius: 12px;
-    }
-    
-    .themeSelector::-moz-range-thumb {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .themeSelector::-moz-range-track {
-        height: 20px;
-        border-radius: 12px;
+        width: 12px;
+        height: 12px;
     }
 }
+
+
+
 
 /* Ajustes para orientación landscape en móviles */
 @media (max-height: 500px) and (orientation: landscape) {
@@ -624,5 +707,34 @@ h4 {
     .boton span,
     .boton-punto span {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 375px) {
+    .numeros-operadores {
+        gap: 12px;
+        padding: 15px;
+    }
+    
+    .fila {
+        gap: 12px; 
+    }
+    
+    .fila-resert-igual {
+        gap: 12px; 
+    }
+}
+
+@media (min-width: 376px) and (max-width: 480px) {
+    .numeros-operadores {
+        gap: 10px;
+    }
+    
+    .fila {
+        gap: 12px;
+    }
+    
+    .fila-resert-igual {
+        gap: 12px;
     }
 }
